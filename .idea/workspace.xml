@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Usuario.java" afterDir="false" />
+    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="clases, atributos, constructores, etc...">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cama.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/EstadoProducto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Habitacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/HabitacionDoble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/HabitacionSencilla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Hostal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Planilla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaProducto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaReserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/TipoProducto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/TipoUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -41,6 +57,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.hostelscocora.Model" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,5 +72,20 @@
       <updated>1692397257929</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clases, atributos, constructores, etc..." />
+    <option name="LAST_COMMIT_MESSAGE" value="clases, atributos, constructores, etc..." />
   </component>
 </project>

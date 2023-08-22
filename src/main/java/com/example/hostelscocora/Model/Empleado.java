@@ -3,20 +3,21 @@ package com.example.hostelscocora.Model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Cliente implements Serializable {
+public class Empleado implements Serializable {
+
     private String nombre;
     private String cedula;
     private Usuario usuario;
-    private ArrayList<Reserva>listaReservas=new ArrayList<Reserva>();
+    private ArrayList<Planilla>listaPlanillas=new ArrayList<>();
 
-    public Cliente(String nombre, String cedula, Usuario usuario, ArrayList<Reserva> listaReservas) {
+    public Empleado(String nombre, String cedula, Usuario usuario, ArrayList<Planilla> listaPlanillas) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.usuario = usuario;
-        this.listaReservas = listaReservas;
+        this.listaPlanillas = listaPlanillas;
     }
 
-    public Cliente(){
+    public Empleado() {
     }
 
     public String getNombre() {
@@ -43,21 +44,21 @@ public class Cliente implements Serializable {
         this.usuario = usuario;
     }
 
-    public ArrayList<Reserva> getListaReservas() {
-        return listaReservas;
+    public ArrayList<Planilla> getListaPlanillas() {
+        return listaPlanillas;
     }
 
-    public void setListaReservas(ArrayList<Reserva> listaReservas) {
-        this.listaReservas = listaReservas;
+    public void setListaPlanillas(ArrayList<Planilla> listaPlanillas) {
+        this.listaPlanillas = listaPlanillas;
     }
 
     @Override
     public String toString() {
-        return "Cliente{" +
+        return "Empleado{" +
                 "nombre='" + nombre + '\'' +
                 ", cedula='" + cedula + '\'' +
                 ", usuario=" + usuario +
-                ", listaReservas=" + listaReservas +
+                ", listaPlanillas=" + listaPlanillas +
                 '}';
     }
 }
