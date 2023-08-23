@@ -1,6 +1,7 @@
 package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class HabitacionDoble extends Habitacion implements Serializable {
 
@@ -62,5 +63,18 @@ public class HabitacionDoble extends Habitacion implements Serializable {
                 ", numCamasSencillas=" + numCamasSencillas +
                 ", precioNoche=" + precioNoche +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof HabitacionDoble that)) return false;
+        if (!super.equals(o)) return false;
+        return getNumCamasDobles() == that.getNumCamasDobles() && getNumCamasSencillas() == that.getNumCamasSencillas() && Double.compare(that.getPrecioNoche(), getPrecioNoche()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getNumCamasDobles(), getNumCamasSencillas(), getPrecioNoche());
     }
 }

@@ -1,6 +1,7 @@
 package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Habitacion extends Producto implements Serializable {
     private boolean isCamaExtra;
@@ -42,5 +43,17 @@ public class Habitacion extends Producto implements Serializable {
                 "isCamaExtra=" + isCamaExtra +
                 ", isReservada=" + isReservada +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Habitacion that)) return false;
+        return isCamaExtra() == that.isCamaExtra() && isReservada() == that.isReservada();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isCamaExtra(), isReservada());
     }
 }

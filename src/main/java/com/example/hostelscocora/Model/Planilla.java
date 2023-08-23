@@ -1,6 +1,7 @@
 package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Planilla implements Serializable {
 
@@ -26,5 +27,17 @@ public class Planilla implements Serializable {
         return "Planilla{" +
                 "id='" + id + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Planilla planilla)) return false;
+        return Objects.equals(getId(), planilla.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
     }
 }

@@ -2,6 +2,7 @@ package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Cliente implements Serializable {
     private String nombre;
@@ -59,5 +60,17 @@ public class Cliente implements Serializable {
                 ", usuario=" + usuario +
                 ", listaReservas=" + listaReservas +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Cliente cliente)) return false;
+        return Objects.equals(getNombre(), cliente.getNombre()) && Objects.equals(getCedula(), cliente.getCedula()) && Objects.equals(getUsuario(), cliente.getUsuario());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNombre(), getCedula(), getUsuario());
     }
 }
