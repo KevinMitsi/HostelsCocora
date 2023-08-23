@@ -2,6 +2,7 @@ package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Objects;
 
 public class Cliente implements Serializable {
@@ -73,4 +74,14 @@ public class Cliente implements Serializable {
     public int hashCode() {
         return Objects.hash(getNombre(), getCedula(), getUsuario());
     }
+
+    public static void crearReserva(String nombre, Date fechaIngreso, Date fechaSalida, String idHabitacion){
+    }
+    public static void editarReserva(Reserva reserva){
+
+    }
+    public static void eliminarReserva(Reserva reserva){
+
+    }
+
 }

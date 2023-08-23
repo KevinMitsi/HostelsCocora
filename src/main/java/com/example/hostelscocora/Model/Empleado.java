@@ -73,4 +73,18 @@ public class Empleado implements Serializable {
     public int hashCode() {
         return Objects.hash(getNombre(), getCedula(), getUsuario());
     }
+
+    public static void crearPlanilla(String id, String tipo){
+
+    }
+
+    public static void editarPlanilla(Planilla planilla){
+
+    }
+
+    public static void eliminarPlanilla(Planilla planilla){
+
+    }
+
+
 }

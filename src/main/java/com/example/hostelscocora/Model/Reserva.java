@@ -2,18 +2,23 @@ package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public class Reserva implements Serializable {
+
     private String id;
-    private LocalDate fecha;
+    private Date fechaInicio;
+
+    private Date fechaSalida;
     private int diasDuracionReserva;
     private String nombreCliente;
     private String idHabitacion;
 
-    public Reserva(String id, LocalDate fecha, int diasDuracionReserva, String nombreCliente, String idHabitacion) {
+    public Reserva(String id, Date fechaInicio, Date fechaSalida, int diasDuracionReserva, String nombreCliente, String idHabitacion) {
         this.id = id;
-        this.fecha = fecha;
+        this.fechaInicio = fechaInicio;
+        this.fechaSalida = fechaSalida;
         this.diasDuracionReserva = diasDuracionReserva;
         this.nombreCliente = nombreCliente;
         this.idHabitacion = idHabitacion;
@@ -30,12 +35,20 @@ public class Reserva implements Serializable {
         this.id = id;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
+    public Date getFechaInicio() {
+        return fechaInicio;
     }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public Date getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(Date fechaSalida) {
+        this.fechaSalida = fechaSalida;
     }
 
     public int getDiasDuracionReserva() {
@@ -66,22 +79,24 @@ public class Reserva implements Serializable {
     public String toString() {
         return "Reserva{" +
                 "id='" + id + '\'' +
-                ", fecha=" + fecha +
+                ", fechaInicio=" + fechaInicio +
+                ", fechaSalida=" + fechaSalida +
                 ", diasDuracionReserva=" + diasDuracionReserva +
                 ", nombreCliente='" + nombreCliente + '\'' +
                 ", idHabitacion='" + idHabitacion + '\'' +
                 '}';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Reserva reserva)) return false;
-        return getDiasDuracionReserva() == reserva.getDiasDuracionReserva() && Objects.equals(getId(), reserva.getId()) && Objects.equals(getFecha(), reserva.getFecha()) && Objects.equals(getNombreCliente(), reserva.getNombreCliente()) && Objects.equals(getIdHabitacion(), reserva.getIdHabitacion());
+        return getId().equals(reserva.getId()) && getNombreCliente().equals(reserva.getNombreCliente()) && getIdHabitacion().equals(reserva.getIdHabitacion());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFecha(), getDiasDuracionReserva(), getNombreCliente(), getIdHabitacion());
+        return Objects.hash(getId(), getNombreCliente(), getIdHabitacion());
     }
 }
