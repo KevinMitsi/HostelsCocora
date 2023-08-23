@@ -2,6 +2,7 @@ package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Reserva implements Serializable {
     private String id;
@@ -70,5 +71,17 @@ public class Reserva implements Serializable {
                 ", nombreCliente='" + nombreCliente + '\'' +
                 ", idHabitacion='" + idHabitacion + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Reserva reserva)) return false;
+        return getDiasDuracionReserva() == reserva.getDiasDuracionReserva() && Objects.equals(getId(), reserva.getId()) && Objects.equals(getFecha(), reserva.getFecha()) && Objects.equals(getNombreCliente(), reserva.getNombreCliente()) && Objects.equals(getIdHabitacion(), reserva.getIdHabitacion());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getFecha(), getDiasDuracionReserva(), getNombreCliente(), getIdHabitacion());
     }
 }

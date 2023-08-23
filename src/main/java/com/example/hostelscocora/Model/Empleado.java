@@ -2,6 +2,7 @@ package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Empleado implements Serializable {
 
@@ -58,7 +59,18 @@ public class Empleado implements Serializable {
                 "nombre='" + nombre + '\'' +
                 ", cedula='" + cedula + '\'' +
                 ", usuario=" + usuario +
-                ", listaPlanillas=" + listaPlanillas +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Empleado empleado)) return false;
+        return Objects.equals(getNombre(), empleado.getNombre()) && Objects.equals(getCedula(), empleado.getCedula()) && Objects.equals(getUsuario(), empleado.getUsuario());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNombre(), getCedula(), getUsuario());
     }
 }

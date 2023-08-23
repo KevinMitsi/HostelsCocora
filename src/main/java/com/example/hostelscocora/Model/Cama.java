@@ -10,4 +10,5 @@ public class Cama extends Producto implements Serializable {
 
     public Cama() {
     }
+
 }

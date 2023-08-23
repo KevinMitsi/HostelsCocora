@@ -2,26 +2,27 @@ package com.example.hostelscocora.Model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Hostal implements Serializable {
     private String nombre;
     private String direccion;
-    private ArrayList<Habitacion>listaHabitaciones=new ArrayList<>();
-    private ArrayList<Empleado>listaEmpleados=new ArrayList<>();
-    private ArrayList<Usuario>listaUsuarios=new ArrayList<>();
-    private ArrayList<Cliente>listaClientes=new ArrayList<>();
-    private ArrayList<Cama>listaCamas=new ArrayList<>();
-    private ArrayList<Reserva>listaReservas=new ArrayList<>();
+    private ArrayList<Habitacion>listaHabitaciones;
+    private ArrayList<Empleado>listaEmpleados;
+    private ArrayList<Usuario>listaUsuarios;
+    private ArrayList<Cliente>listaClientes;
+    private ArrayList<Cama>listaCamas;
+    private ArrayList<Reserva>listaReservas;
 
-    public Hostal(String nombre, String direccion, ArrayList<Habitacion> listaHabitaciones, ArrayList<Empleado> listaEmpleados, ArrayList<Usuario> listaUsuarios, ArrayList<Cliente> listaClientes, ArrayList<Cama> listaCamas, ArrayList<Reserva> listaReservas) {
+    public Hostal(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
-        this.listaHabitaciones = listaHabitaciones;
-        this.listaEmpleados = listaEmpleados;
-        this.listaUsuarios = listaUsuarios;
-        this.listaClientes = listaClientes;
-        this.listaCamas = listaCamas;
-        this.listaReservas = listaReservas;
+        this.listaHabitaciones = new ArrayList<>();
+        this.listaEmpleados = new ArrayList<>();
+        this.listaUsuarios = new ArrayList<>();
+        this.listaClientes = new ArrayList<>();
+        this.listaCamas = new ArrayList<>();
+        this.listaReservas = new ArrayList<>();
     }
 
     public Hostal() {
@@ -103,5 +104,17 @@ public class Hostal implements Serializable {
                 ", listaCamas=" + listaCamas +
                 ", listaReservas=" + listaReservas +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Hostal hostal)) return false;
+        return Objects.equals(getNombre(), hostal.getNombre()) && Objects.equals(getDireccion(), hostal.getDireccion());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNombre(), getDireccion());
     }
 }
