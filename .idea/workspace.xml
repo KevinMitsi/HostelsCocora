@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="clases, atributos, constructores, etc...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" afterDir="false" />
@@ -12,6 +13,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Hostal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Hostal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Reserva.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="clases, atributos, constructores, etc..." />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
