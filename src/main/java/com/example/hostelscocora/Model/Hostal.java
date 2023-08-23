@@ -117,4 +117,35 @@ public class Hostal implements Serializable {
     public int hashCode() {
         return Objects.hash(getNombre(), getDireccion());
     }
+
+    public static void crearUsurio(String username, String contrasena, TipoUsuario tipo){
+
+    }
+
+    public static void eliminarUsuario(Usuario usuario){
+
+    }
+    public static void crearEmpleado(String nombre, String cedula, Usuario usuario){
+
+    }
+    public static void eliminarEmpleado(Empleado empleado){
+
+    }
+    public static void crearCliente(String nombre, String cedula, Usuario usuario){
+
+    }
+    public static void crearCama(String id, EstadoProducto estado, TipoProducto tipo){
+
+    }
+    public static void eliminarCama(Cama cama){
+
+    }
+    public static void crearHabitacion(String id, EstadoProducto estado, TipoProducto tipo){
+
+    }
+    public static void eliminarHabitacion(Habitacion habitacio){
+
+    }
+
+
 }
