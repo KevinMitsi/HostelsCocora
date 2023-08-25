@@ -14,6 +14,8 @@ public class Hostal implements Serializable {
     private ArrayList<Cama>listaCamas;
     private ArrayList<Reserva>listaReservas;
 
+    /*---------------constructors---------------------*/
+
     public Hostal(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
@@ -27,6 +29,8 @@ public class Hostal implements Serializable {
 
     public Hostal() {
     }
+
+    /*--------Getters && Setters---------*/
 
     public String getNombre() {
         return nombre;
@@ -92,6 +96,8 @@ public class Hostal implements Serializable {
         this.listaReservas = listaReservas;
     }
 
+   /*----------------Equals and HashCode------------------------*/
+
     @Override
     public String toString() {
         return "Hostal{" +
@@ -117,4 +123,20 @@ public class Hostal implements Serializable {
     public int hashCode() {
         return Objects.hash(getNombre(), getDireccion());
     }
+
+
+ /*--------------Own Class Methods*----------------------------*/
+
+    public Usuario crearUsuario(String username, String password, TipoUsuario tipoUsuario) throws Exception {
+        Usuario user = new Usuario(username, password, tipoUsuario);
+        if(listaUsuarios.contains(user)){
+            throw new Exception("Usuario ya creado");
+        }
+        else{
+            listaUsuarios.add(user);
+            return user;
+        }
+    }
 }
+
+

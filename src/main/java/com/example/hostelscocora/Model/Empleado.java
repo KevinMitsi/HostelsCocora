@@ -9,13 +9,13 @@ public class Empleado implements Serializable {
     private String nombre;
     private String cedula;
     private Usuario usuario;
-    private ArrayList<Planilla>listaPlanillas=new ArrayList<>();
+    private ArrayList<Planilla>listaPlanillas;
 
-    public Empleado(String nombre, String cedula, Usuario usuario, ArrayList<Planilla> listaPlanillas) {
+    public Empleado(String nombre, String cedula, Usuario usuario) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.usuario = usuario;
-        this.listaPlanillas = listaPlanillas;
+        this.listaPlanillas =new ArrayList<>();
     }
 
     public Empleado() {

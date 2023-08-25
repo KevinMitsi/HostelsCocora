@@ -4,27 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="clases, atributos, constructores, etc...">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/InicioSesionViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/ModelFactoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Persistencia/ArchivoUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Persistencia/Persistencia.java" afterDir="false" />
+    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cama.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/InicioSesionViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/InicioSesionViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Habitacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Habitacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/HabitacionDoble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/HabitacionDoble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/HabitacionSencilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/HabitacionSencilla.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Hostal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Hostal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Planilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Planilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/PlanillaReserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Persistencia/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Persistencia/Persistencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hostelscocora/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hostelscocora/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +46,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "ramaKevin",
     "last_opened_file_path": "C:/Users/Kevin/Desktop/Universidad/ProgramacionIII/MarCo Recuperacion 8y40 Lunes"
   }
 }]]></component>
@@ -74,6 +65,15 @@
       <option name="presentableId" value="Default" />
       <updated>1692397257929</updated>
     </task>
+    <task id="LOCAL-00001" summary="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton">
+      <option name="closed" value="true" />
+      <created>1692756049178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692756049178</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +89,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clases, atributos, constructores, etc..." />
-    <option name="LAST_COMMIT_MESSAGE" value="clases, atributos, constructores, etc..." />
+    <MESSAGE value="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton" />
   </component>
 </project>
