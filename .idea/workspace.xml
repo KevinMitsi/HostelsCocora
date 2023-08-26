@@ -4,81 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="clases, atributos, constructores, etc...">
+    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/InicioSesionViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/InicioSesionViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/EstadoProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/EstadoProducto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Hostal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Hostal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Model/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Persistencia/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Persistencia/Persistencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hostelscocora/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hostelscocora/hello-view.fxml" afterDir="false" />
     </list>
-=======
-    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="clases, atributos, constructores, etc..." />
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2UAzd9ogDIaHhcNA5qxiqiGn7ug" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kevin/Desktop/Universidad/ProgramacionIII/MarCo Recuperacion 8y40 Lunes&quot;
+  <!-- Rest of the components... -->
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "ramaKevin",
+    "last_opened_file_path": "C:/Users/Kevin/Desktop/Universidad/ProgramacionIII/MarCo Recuperacion 8y40 Lunes"
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.hostelscocora.Model" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="" />
-      <created>1692397257929</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1692397257929</updated>
-    </task>
-    <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
+  <!-- Rest of the components... -->
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clases, atributos, constructores, etc..." />
-    <option name="LAST_COMMIT_MESSAGE" value="clases, atributos, constructores, etc..." />
+    <MESSAGE value="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton" />
   </component>
 </project>

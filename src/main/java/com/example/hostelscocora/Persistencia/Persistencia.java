@@ -1,7 +1,6 @@
 package com.example.hostelscocora.Persistencia;
 
-import com.example.hostelscocora.Model.Empleado;
-import com.example.hostelscocora.Model.Hostal;
+import com.example.hostelscocora.Model.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,7 +8,8 @@ import java.util.ArrayList;
 
 public class Persistencia {
     public static final String RUTA_ARCHIVO_EMPLEADOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoEmpleados.txt";
-    public static final String RUTA_ARCHIVO_CLIENTES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoCuentas.txt";
+    public static final String RUTA_ARCHIVO_USUARIOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoUsuarios.txt";
+    public static final String RUTA_ARCHIVO_CLIENTES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoClientes.txt";
     public static final String RUTA_ARCHIVO_RESERVAS_ = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoReseras.txt";
     public static final String RUTA_ARCHIVO_LOG = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\SnowaloweLog.txt";
     public static final String RUTA_ARCHIVO_MODELO_HOTAL_BINARIO = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\model.dat";
@@ -31,22 +31,47 @@ public class Persistencia {
 
 
 
-    public static void guardarEmpleados(ArrayList<Empleado> listaEmpleados) throws IOException {
+    public static void guardarArchivoEmpleados(ArrayList<Empleado> listaEmpleados) throws IOException {
 
         // TODO Auto-generated method stub
         String contenido = "";
 
         for(Empleado empleado:listaEmpleados)
         {
-            contenido+= empleado.getNombre()+","+empleado.getCedula()+","+"\n";
+            contenido+= empleado.getNombre()+","+empleado.getCedula()+"\n";
         }
         ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_EMPLEADOS, contenido, false);
     }
 
+    public static void guardarArchivoUsuarios(ArrayList<Usuario>listaUsuarios) throws IOException {
+        String contenido="";
+        for (Usuario usuario: listaUsuarios)
+        {
+            contenido+= usuario.getUsername()+","+usuario.getContrasena()+","+usuario.getTipo()+"\n";
+        }
+        ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_USUARIOS, contenido, false);
+    }
+
+    public static void guardarArchivoClientes(ArrayList<Cliente> listaClientes) throws IOException {
+        String contenido="";
+        for (Cliente cliente: listaClientes)
+        {
+            contenido+=cliente.getNombre()+","+cliente.getCedula()+","+cliente.getListaReservas()+"\n";
+        }
+        ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_CLIENTES, contenido, false);
+    }
+
+    public static void guardarArchivoReservas(ArrayList<Reserva> listaReservas) throws  IOException{
+        String contenido="";
+        for (Reserva reserva: listaReservas)
+        {
+            contenido+=reserva.getId()+","+reserva.getNombreCliente()+","+reserva.getIdHabitacion()+",";
+        }
+    }
+
+
+
     /*
-
-
-
     public static void guardarCuentas(ArrayList<Cuenta> listaCuentas) throws IOException {
 
         // TODO Auto-generated method stub
@@ -89,47 +114,9 @@ public class Persistencia {
         }
         return usuarios;
     }
-
-
-
 //	----------------------LOADS------------------------
 
     */
-/**
-     *
-
-     * @return un Arraylist de personas con los datos obtenidos del archivo de texto indicado
-     * @throws FileNotFoundException
-     * @throws IOException
-     *//*
-
-
-
-
-
-    private static ArrayList<Vendedor> cargarVendedores() throws IOException {
-
-        ArrayList<Vendedor> vendedores =new ArrayList<Vendedor>();
-
-        ArrayList<String> contenido = ArchivoUtil.leerArchivo(RUTA_ARCHIVO_VENDEDORES);
-        String linea="";
-
-        for (int i = 0; i < contenido.size(); i++)
-        {
-            linea = contenido.get(i);
-            Vendedor vendedor = new Vendedor();
-            Cuenta cuenta = new Cuenta();
-            vendedor.setNombre(linea.split(",")[0]);
-            vendedor.setApellido(linea.split(",")[1]);
-            vendedor.setCedula(linea.split(",")[2]);
-            vendedor.setDireccion(linea.split(",")[3]);
-            vendedores.add(vendedor);
-        }
-        return vendedores;
-    }
-
-*/
-
 
 
     public static void guardaRegistroLog(String mensajeLog, int nivel, String accion)
@@ -177,7 +164,6 @@ public class Persistencia {
             e.printStackTrace();
         }
         return hostal;
-
     }
 
 
