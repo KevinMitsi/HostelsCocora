@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="722.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hostelscocora.Controllers.InicioAdministratorViewController">
+   <children>
+      <Label layoutX="260.0" layoutY="33.0" text="BIENVENIDO ADMINISTRADOR">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="53.0" text="Label" />
+      <TableView fx:id="tableCliente" layoutX="263.0" layoutY="430.0" prefHeight="236.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colClienteCedula" prefWidth="63.333343505859375" text="cedula" />
+          <TableColumn fx:id="colClienteNombre" prefWidth="135.3333282470703" text="nombre" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableEmpleado" layoutX="35.0" layoutY="430.0" prefHeight="236.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colEmpleadoCedula" prefWidth="59.33331298828125" text="cedula" />
+          <TableColumn fx:id="colEmpleadoNombre" prefWidth="140.66665649414062" text="nombre" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableReserva" layoutX="496.0" layoutY="430.0" prefHeight="236.0" prefWidth="225.0">
+        <columns>
+          <TableColumn fx:id="colHabitacionReserva" prefWidth="76.33334350585938" text="habitación" />
+          <TableColumn fx:id="colEntradaReserva" prefWidth="78.3333740234375" text="entrada" />
+            <TableColumn fx:id="colSalidaReserva" prefWidth="73.0" text="salida" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCrearEmpleado" layoutX="35.0" layoutY="673.0" mnemonicParsing="false" onAction="#onCrearEmpleadoButtonClick" text="Crear Empleado">
+         <font>
+            <Font size="9.0" />
+         </font></Button>
+      <Button fx:id="btnNuevoProducto" layoutX="118.0" layoutY="345.0" mnemonicParsing="false" onAction="#onNuevoProductoButtonClick" text="Nuevo Producto">
+         <font>
+            <Font size="9.0" />
+         </font></Button>
+      <Label layoutX="342.0" layoutY="393.0" text="Cliente">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="393.0" text="Empleado">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="588.0" layoutY="393.0" text="Reserva">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TableView fx:id="tableProducto" layoutX="118.0" layoutY="99.0" prefHeight="236.0" prefWidth="492.0">
+        <columns>
+          <TableColumn fx:id="colIdProducto" prefWidth="99.66668701171875" text="ID" />
+          <TableColumn fx:id="colCamaHabitacion" prefWidth="161.33331298828125" text="cama/habitación" />
+            <TableColumn fx:id="colTipo" prefWidth="108.66665649414062" text="tipo" />
+            <TableColumn fx:id="colEstado" prefWidth="121.0" text="estado" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnEliminarEmpleado" layoutX="149.0" layoutY="673.0" mnemonicParsing="false" onAction="#onEliminarEmpleadoButtonClick" text="Eliminar Empleado">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminarProducto" layoutX="206.0" layoutY="345.0" mnemonicParsing="false" onAction="#onEliminarProductoButtonClick" text="Eliminar Producto">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
