@@ -150,6 +150,50 @@ public class Hostal implements Serializable {
         }
     }
 
+    public Cliente crearCliente(String nombre, String cedula, Usuario usuario) throws Exception {
+        Cliente cliente = new Cliente(nombre, cedula, usuario);
+        if(listaClientes.contains(cliente)){
+            throw new Exception("El cliene ya existe");
+        }
+        else{
+            listaClientes.add(cliente);
+            return cliente;
+        }
+    }
+
+    public Cama crearCama(String id, TipoProducto tipo) throws Exception {
+        Cama cama = new Cama(id, tipo);
+        if(listaCamas.contains(cama)){
+            throw new Exception("La cama ya existe");
+        }
+        else {
+            listaCamas.add(cama);
+            return cama;
+        }
+    }
+
+    public HabitacionSencilla crearHabitacionSencilla(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, double precioNoche) throws Exception {
+        HabitacionSencilla habitacionSencilla = new HabitacionSencilla(id, tipo, isCamaExtra, isReservada, precioNoche);
+        if (listaHabitaciones.contains(habitacionSencilla)){
+            throw new Exception("Habitacion ya registrada");
+        }
+        else {
+            listaHabitaciones.add(habitacionSencilla);
+            return habitacionSencilla;
+        }
+    }
+
+    public HabitacionDoble crearHabitacionDoble(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, int numCamasDobles, int numCamasSencillas, double precioNoche) throws Exception {
+        HabitacionDoble habitacionDoble = new HabitacionDoble(id, tipo, isCamaExtra, isReservada, numCamasDobles, numCamasSencillas, precioNoche);
+        if(listaHabitaciones.contains(habitacionDoble)){
+            throw new Exception("Esta habitacion ya existe");
+        }
+        else{
+            listaHabitaciones.add(habitacionDoble);
+            return habitacionDoble;
+        }
+
+    }
   /*  -----------Delete Mehtods--------------*/
 
     public void eliminarUsuario(Usuario usuario) throws Exception {
@@ -169,6 +213,35 @@ public class Hostal implements Serializable {
             throw new Exception("El empleado no existe");
         }
     }
+
+    public void eliminarCliente(Cliente cliente) throws Exception {
+        if (listaClientes.contains(cliente)){
+            listaClientes.remove(cliente);
+        }
+        else{
+            throw new Exception("El cliente no existe");
+        }
+    }
+
+    public void eliminarCama(Cama cama) throws Exception {
+        if(listaCamas.contains(cama)){
+            listaCamas.remove(cama);
+        }
+        else{
+            throw new Exception("La cama no existe");
+        }
+    }
+
+    public void eliminarHabitacion(Habitacion habitacion) throws Exception {
+        if (listaHabitaciones.contains(habitacion)){
+            listaHabitaciones.remove(habitacion);
+        }
+        else{
+            throw new Exception("Esta habiacion no existe");
+        }
+    }
+
+
 }
 
 
