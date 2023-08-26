@@ -125,6 +125,9 @@ public class Hostal implements Serializable {
     }
    /*--------------Own Class Methods*----------------------------*/
 
+
+/*------------Create Methods-------------------------*/
+
     public Usuario crearUsuario(String username, String password, TipoUsuario tipoUsuario) throws Exception {
         Usuario user = new Usuario(username, password, tipoUsuario);
         if(listaUsuarios.contains(user)){
@@ -136,8 +139,36 @@ public class Hostal implements Serializable {
         }
     }
 
+    public Empleado crearEmpleado(String nombre, String cedula, Usuario usuario) throws Exception {
+        Empleado empleado = new Empleado(nombre, cedula, usuario);
+        if(listaEmpleados.contains(empleado)){
+            throw new Exception("Este empleado ya está creado");
+        }
+        else{
+            listaEmpleados.add(empleado);
+            return empleado;
+        }
+    }
 
+  /*  -----------Delete Mehtods--------------*/
 
+    public void eliminarUsuario(Usuario usuario) throws Exception {
+        if(listaUsuarios.contains(usuario)){
+            listaUsuarios.remove(usuario);
+        }
+        else {
+            throw new Exception("El usuario no existe");
+        }
+    }
+
+    public void eliminarEmpleado(Empleado empleado) throws Exception {
+        if(listaEmpleados.contains(empleado)){
+            listaEmpleados.remove(empleado);
+        }
+        else {
+            throw new Exception("El empleado no existe");
+        }
+    }
 }
 
 
