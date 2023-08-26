@@ -10,7 +10,7 @@ public class Persistencia {
     public static final String RUTA_ARCHIVO_EMPLEADOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoEmpleados.txt";
     public static final String RUTA_ARCHIVO_USUARIOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoUsuarios.txt";
     public static final String RUTA_ARCHIVO_CLIENTES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoClientes.txt";
-    public static final String RUTA_ARCHIVO_RESERVAS_ = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoReseras.txt";
+    public static final String RUTA_ARCHIVO_RESERVAS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoReseras.txt";
     public static final String RUTA_ARCHIVO_LOG = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\SnowaloweLog.txt";
     public static final String RUTA_ARCHIVO_MODELO_HOTAL_BINARIO = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\model.dat";
     public static final String RUTA_ARCHIVO_MODELO_HOSTAL_XML = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\model.xml";
@@ -67,56 +67,9 @@ public class Persistencia {
         {
             contenido+=reserva.getId()+","+reserva.getNombreCliente()+","+reserva.getIdHabitacion()+",";
         }
+        ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_RESERVAS, contenido, false);
     }
 
-
-
-    /*
-    public static void guardarCuentas(ArrayList<Cuenta> listaCuentas) throws IOException {
-
-        // TODO Auto-generated method stub
-        String contenido = "";
-
-        for(Cuenta cuenta:listaCuentas)
-        {
-            contenido+= cuenta.getUsuario()+ ","+ cuenta.getContrasenia()+ "\n";
-        }
-        ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_CUENTA, contenido, false);
-    }
-
-
-    private static boolean validarUsuario(String usuario, String contrasenia) throws FileNotFoundException, IOException
-    {
-        ArrayList<Cuenta> usuarios = Persistencia.cargarCuentas(RUTA_ARCHIVO_CUENTA);
-
-        for (Cuenta cuentaAux : usuarios) {
-            if (cuentaAux.getUsuario().equalsIgnoreCase(usuario) && cuentaAux.getContrasenia().equalsIgnoreCase(contrasenia)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static ArrayList<Cuenta> cargarCuentas(String ruta) throws FileNotFoundException, IOException {
-        ArrayList<Cuenta> usuarios =new ArrayList<Cuenta>();
-
-        ArrayList<String> contenido = ArchivoUtil.leerArchivo(ruta);
-        String linea="";
-
-        for (int i = 0; i < contenido.size(); i++) {
-            linea = contenido.get(i);
-
-            Cuenta usuario = new Cuenta();
-            usuario.setUsuario(linea.split(",")[0]);
-            usuario.setContrasenia(linea.split(",")[1]);
-
-            usuarios.add(usuario);
-        }
-        return usuarios;
-    }
-//	----------------------LOADS------------------------
-
-    */
 
 
     public static void guardaRegistroLog(String mensajeLog, int nivel, String accion)
