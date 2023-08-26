@@ -9,7 +9,6 @@ public class Reserva implements Serializable {
 
     private String id;
     private Date fechaInicio;
-
     private Date fechaSalida;
     private int diasDuracionReserva;
     private String nombreCliente;

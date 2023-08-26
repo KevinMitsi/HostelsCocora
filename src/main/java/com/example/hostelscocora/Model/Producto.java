@@ -5,12 +5,11 @@ import java.util.Objects;
 
 public class Producto implements Serializable {
     private String id;
-    private EstadoProducto estado;
+    private EstadoProducto estado = EstadoProducto.DISPONIBLE;
     private TipoProducto tipo;
 
-    public Producto(String id, EstadoProducto estado, TipoProducto tipo) {
+    public Producto(String id, TipoProducto tipo) {
         this.id = id;
-        this.estado = estado;
         this.tipo = tipo;
     }
 

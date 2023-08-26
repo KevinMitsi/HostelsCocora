@@ -9,13 +9,13 @@ public class Cliente implements Serializable {
     private String nombre;
     private String cedula;
     private Usuario usuario;
-    private ArrayList<Reserva>listaReservas=new ArrayList<Reserva>();
+    private ArrayList<Reserva>listaReservas;
 
-    public Cliente(String nombre, String cedula, Usuario usuario, ArrayList<Reserva> listaReservas) {
+    public Cliente(String nombre, String cedula, Usuario usuario) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.usuario = usuario;
-        this.listaReservas = listaReservas;
+        this.listaReservas = new ArrayList<>();
     }
 
     public Cliente(){
