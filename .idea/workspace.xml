@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+=======
+    <list default="true" id="2660e986-ffa4-4d87-b086-17da8cb3e3fe" name="Changes" comment="Hice tatta">
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/InicioSesionViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/Controllers/InicioSesionViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hostelscocora/HelloApplication.java" afterDir="false" />
@@ -65,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1692397257929</updated>
     </task>
+<<<<<<< Updated upstream
     <task id="LOCAL-00001" summary="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton">
       <option name="closed" value="true" />
       <created>1692756049178</created>
@@ -72,10 +77,20 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1692756049178</updated>
+=======
+    <task id="LOCAL-00001" summary="Hice tatta">
+      <option name="closed" value="true" />
+      <created>1692658996989</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692658996989</updated>
+>>>>>>> Stashed changes
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+<<<<<<< Updated upstream
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -91,5 +106,10 @@
     <MESSAGE value="clases, atributos, constructores, etc..." />
     <MESSAGE value="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton" />
     <option name="LAST_COMMIT_MESSAGE" value="Agregué Persistencia, ArchivoUtil, los equals y los HashCodes además del Singleton" />
+=======
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hice tatta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hice tatta" />
+>>>>>>> Stashed changes
   </component>
 </project>
