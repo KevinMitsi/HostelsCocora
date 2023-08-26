@@ -123,9 +123,7 @@ public class Hostal implements Serializable {
     public int hashCode() {
         return Objects.hash(getNombre(), getDireccion());
     }
-
-
- /*--------------Own Class Methods*----------------------------*/
+   /*--------------Own Class Methods*----------------------------*/
 
     public Usuario crearUsuario(String username, String password, TipoUsuario tipoUsuario) throws Exception {
         Usuario user = new Usuario(username, password, tipoUsuario);
@@ -137,6 +135,9 @@ public class Hostal implements Serializable {
             return user;
         }
     }
+
+
+
 }
 
 

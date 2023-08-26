@@ -4,5 +4,6 @@ import java.io.Serializable;
 
 public enum EstadoProducto implements Serializable {
     MANTENIMIENTO,
-    OPERACION
+    OPERACION,
+    DISPONIBLE
 }
