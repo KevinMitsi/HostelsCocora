@@ -1,11 +1,13 @@
 package com.example.hostelscocora.Controllers;
 
+import com.example.hostelscocora.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 public class InicioAdministratorViewController {
+    HelloApplication main;
     public TableView tableCliente;
     public TableColumn colClienteNombre;
     public TableColumn colClienteCedula;
@@ -37,4 +39,10 @@ public class InicioAdministratorViewController {
 
     public void onNuevoProductoButtonClick(ActionEvent actionEvent) {
     }
+
+    public void setMain(HelloApplication helloApplication) {
+        this.main=helloApplication;
+    }
+
+
 }
