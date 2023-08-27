@@ -34,9 +34,9 @@ public class HelloApplication extends Application {
        stage.show();
     }
     public void abrirPanelEmpleado(Empleado empleadoLogeado) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("inicioEmpleadoView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("panelEmpleadoView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        IncioEmpleadoViewController controller = fxmlLoader.getController();
+        PanelEmpleadoController controller = fxmlLoader.getController();
         controller.setMain(this);
         scene.getStylesheets().clear();
         scene.setFill(Color.TRANSPARENT);
