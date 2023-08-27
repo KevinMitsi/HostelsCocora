@@ -3,6 +3,8 @@ package com.example.hostelscocora.Controllers;
 import com.example.hostelscocora.Model.*;
 import com.example.hostelscocora.Persistencia.Persistencia;
 
+import java.util.ArrayList;
+
 public class ModelFactoryController {
     Hostal hostal;
 
@@ -24,6 +26,9 @@ public class ModelFactoryController {
     public HabitacionDoble crearHabitacionDoble(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, int numCamasDobles, int numCamasSencillas, double precioNoche) throws Exception {
         return hostal.crearHabitacionDoble(id,tipo,isCamaExtra,isReservada,numCamasDobles,numCamasSencillas,precioNoche);
     }
+    public void agregarProducto(Producto producto) throws Exception {
+        hostal.agregarProducto(producto);
+    }
     public void eliminarUsuario(Usuario usuario) throws Exception {
         hostal.eliminarUsuario(usuario);
     }
@@ -39,26 +44,36 @@ public class ModelFactoryController {
     public void eliminarHabitacion(Habitacion habitacion) throws Exception {
         hostal.eliminarHabitacion(habitacion);
     }
+    public void eliminarProducto(Producto producto) throws Exception {
+        hostal.elimnarProducto(producto);
+    }
     public Empleado iniciarSesionEmpleado(String username, String password) throws Exception {
        return hostal.iniciarSesionEmpleado(username,password);
     }
     public Cliente iniciarSesionCliente(String username, String password) throws Exception {
         return hostal.iniciarSesionCliente(username, password);
     }
+    public ArrayList<Empleado> getListaEmpleados(){
+        return hostal.getListaEmpleados();
+    }
+    public ArrayList<Cliente> getListaClientes(){
+        return hostal.getListaClientes();
+    }
+    public ArrayList<Habitacion> getListaHabitaciones(){
+        return hostal.getListaHabitaciones();
+    }
+    public ArrayList<Cama> getListaCamas(){
+        return hostal.getListaCamas();
+    }
+    public ArrayList<Reserva> getListaReservas(){
+        return hostal.getListaReservas();
+    }
+    public ArrayList<Producto> getListaProdcutos(){ return hostal.getListaProductos();
+    }
 
 
 
-
-
-
-
-
-
-
-
-
-
-        //------------------------------  Singleton ------------------------------------------------
+    //------------------------------  Singleton ------------------------------------------------
     // Clase estatica oculta. Tan solo se instanciara el singleton una vez
     private static class SingletonHolder {
         // El constructor de Singleton puede ser llamado desde aqu� al ser protected
@@ -73,18 +88,7 @@ public class ModelFactoryController {
     public ModelFactoryController() {
 
 
-        //1. inicializar datos y luego guardarlo en archivos
-//		iniciarSalvarDatosPrueba();
-
-        //2. Cargar los datos de los archivos
-//		cargarDatosDesdeArchivos();
-
-
-        //3. Guardar y Cargar el recurso serializable binario
         guardarResourceBinario();
-//		cargarResourceBinario();
-
-        //4. Guardar y Cargar el recurso serializable XML/guardarResourceXML();
         cargarResourceXML();
 
 

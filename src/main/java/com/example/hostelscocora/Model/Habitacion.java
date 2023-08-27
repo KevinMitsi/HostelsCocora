@@ -7,8 +7,8 @@ public class Habitacion extends Producto implements Serializable {
     private boolean isCamaExtra;
     private boolean isReservada=false;
 
-    public Habitacion(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada) {
-        super(id, tipo);
+    public Habitacion(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, String identificador) {
+        super(id, tipo, identificador);
         this.isCamaExtra = isCamaExtra;
         this.isReservada = isReservada;
     }

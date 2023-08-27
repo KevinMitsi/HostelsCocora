@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="19.0.2" class="java.beans.XMLDecoder">
+ <object class="com.example.hostelscocora.Model.Hostal" id="Hostal0">
+  <void property="listaCamas">
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Cama">
+     <void property="id">
+      <string>1</string>
+     </void>
+     <void property="tipo">
+      <object class="java.lang.Enum" id="TipoProducto0" method="valueOf">
+       <class>com.example.hostelscocora.Model.TipoProducto</class>
+       <string>SENCILLO</string>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Cama" id="Cama0">
+     <void property="id">
+      <string>2</string>
+     </void>
+     <void property="tipo">
+      <object idref="TipoProducto0"/>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaEmpleados">
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Empleado">
+     <void property="cedula">
+      <string>111</string>
+     </void>
+     <void property="listaPlanillas">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nombre">
+      <string>kevina</string>
+     </void>
+     <void property="usuario">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario0">
+       <void property="contrasena">
+        <string>123</string>
+       </void>
+       <void property="tipo">
+        <object class="java.lang.Enum" id="TipoUsuario0" method="valueOf">
+         <class>com.example.hostelscocora.Model.TipoUsuario</class>
+         <string>EMPLEADO</string>
+        </object>
+       </void>
+       <void property="username">
+        <string>kevin</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Empleado">
+     <void property="cedula">
+      <string>1092</string>
+     </void>
+     <void property="listaPlanillas">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nombre">
+      <string>AnaSofia</string>
+     </void>
+     <void property="usuario">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario1">
+       <void property="contrasena">
+        <string>123</string>
+       </void>
+       <void property="tipo">
+        <object idref="TipoUsuario0"/>
+       </void>
+       <void property="username">
+        <string>ana</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaHabitaciones">
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.HabitacionSencilla">
+     <void property="id">
+      <string>1</string>
+     </void>
+     <void property="precioNoche">
+      <double>240000.0</double>
+     </void>
+     <void property="tipo">
+      <object idref="TipoProducto0"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.HabitacionDoble">
+     <void property="id">
+      <string>2</string>
+     </void>
+     <void property="numCamasDobles">
+      <int>1</int>
+     </void>
+     <void property="precioNoche">
+      <double>360000.0</double>
+     </void>
+     <void property="tipo">
+      <object class="java.lang.Enum" id="TipoProducto1" method="valueOf">
+       <class>com.example.hostelscocora.Model.TipoProducto</class>
+       <string>DOBLE</string>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.HabitacionDoble">
+     <void property="id">
+      <string>1</string>
+     </void>
+     <void property="numCamasSencillas">
+      <int>2</int>
+     </void>
+     <void property="precioNoche">
+      <double>340000.0</double>
+     </void>
+     <void property="tipo">
+      <object idref="TipoProducto1"/>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaProductos">
+   <void method="add">
+    <object idref="Cama0"/>
+   </void>
+  </void>
+  <void property="listaUsuarios">
+   <void method="add">
+    <object idref="Usuario0"/>
+   </void>
+   <void method="add">
+    <object idref="Usuario1"/>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Usuario">
+     <void property="contrasena">
+      <string>otro</string>
+     </void>
+     <void property="tipo">
+      <object idref="TipoUsuario0"/>
+     </void>
+     <void property="username">
+      <string>otro</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
