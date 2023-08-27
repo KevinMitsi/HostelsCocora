@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="220.0" prefWidth="497.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hostelscocora.Controllers.AmpliacionCamaViewController">
+   <children>
+      <TextField fx:id="tfIdHabitacion" layoutX="131.0" layoutY="80.0" prefHeight="25.0" prefWidth="233.0" promptText="Identificación Habitacion" />
+      <ComboBox fx:id="cbxEstado" layoutX="131.0" layoutY="123.0" prefHeight="25.0" prefWidth="233.0" />
+      <Label layoutX="176.0" layoutY="33.0" text="AMPLIACIÓN CAMA">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEnviar" layoutX="222.0" layoutY="169.0" mnemonicParsing="false" onAction="#onEnviarButtonClick" text="Enviar" />
+      <Button fx:id="btnAtras" layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atrás">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
