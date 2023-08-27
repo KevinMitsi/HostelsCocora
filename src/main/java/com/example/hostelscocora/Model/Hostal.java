@@ -177,7 +177,7 @@ public class Hostal implements Serializable {
     }
 
     public Cama crearCama(String id, TipoProducto tipo) throws Exception {
-        Cama cama = new Cama(id, tipo, "Cama");
+        Cama cama = new Cama(id, tipo, "Cama", null);
         if(listaCamas.contains(cama)){
             throw new Exception("La cama ya existe");
         }

@@ -1,5 +1,11 @@
 package com.example.hostelscocora.Controllers;
 
+import com.example.hostelscocora.HelloApplication;
+import com.example.hostelscocora.Model.*;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -7,9 +13,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 public class PanelEmpleadoController {
+    private ObservableList<Cama> listCamasData = FXCollections.observableArrayList();
+    private ObservableList<Habitacion> listHabitacionesData = FXCollections.observableArrayList();
+    private ObservableList<Cliente> listClientesData = FXCollections.observableArrayList();
 
-    @FXML
-    private TableView<?> TableCamas;
+    private Cama camaSeleccionada = null;
+    private Habitacion habitacionSeleccionada = null;
+    private Cliente clienteSeleccionado = null;
+    HelloApplication main;
+    ModelFactoryController singleton = new ModelFactoryController();
 
     @FXML
     private Button btnCrearCliente;
@@ -18,37 +30,41 @@ public class PanelEmpleadoController {
     private Button btnReservasCliente;
 
     @FXML
-    private TableColumn<?, ?> colEsatdoHabitaciones;
+    private TableView<Cama> TableCamas;
 
     @FXML
-    private TableColumn<?, ?> colEstadoCamas;
+    private TableColumn<Cama, EstadoProducto> colEstadoCamas;
 
     @FXML
-    private TableColumn<?, ?> colIdCama;
+    private TableColumn<Cama, String> colIdCama;
 
     @FXML
-    private TableColumn<?, ?> colIdCliente;
+    private TableColumn<Cama, String> colIdHabitacion;
+    @FXML
+    private TableColumn<Cama, TipoProducto> colTipo;
+
 
     @FXML
-    private TableColumn<?, ?> colIdHabitacion;
+    private TableView<Habitacion> tableHbabitacion;
 
     @FXML
-    private TableColumn<?, ?> colIdHabitaciones;
+    private TableColumn<Habitacion, EstadoProducto> colEsatdoHabitaciones;
+    @FXML
+    private TableColumn<Habitacion, String> colIdHabitaciones;
 
     @FXML
-    private TableColumn<?, ?> colNombreCliente;
+    private TableColumn<Habitacion, TipoProducto> colTipoHabitaciones;
 
     @FXML
-    private TableColumn<?, ?> colTipo;
+    private TableView<Cliente> tableCliente;
 
     @FXML
-    private TableColumn<?, ?> colTipoHabitaciones;
+    private TableColumn<Cliente, String> colIdCliente;
+
 
     @FXML
-    private TableView<?> tableCliente;
+    private TableColumn<Cliente, String> colNombreCliente;
 
-    @FXML
-    private TableView<?> tableHbabitacion;
 
     @FXML
     void onCrearClienteButtonClick(ActionEvent event) {
@@ -80,4 +96,46 @@ public class PanelEmpleadoController {
 
     }
 
+    @FXML
+    void initialize(){
+        colNombreCliente.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
+        colIdCliente.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCedula()));
+        tableCliente.refresh();
+        colEstadoCamas.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getEstado()));
+        colIdCama.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getId()));
+        colIdHabitacion.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getIdHabitacionContiene()));
+        colTipo.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getTipo()));
+        TableCamas.refresh();
+        colIdHabitaciones.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getId()));
+        colEsatdoHabitaciones.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getEstado()));
+        colTipoHabitaciones.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getTipo()));
+        tableHbabitacion.refresh();
+    }
+
+
+    private ObservableList<Cama> obtenerListaCamas() {
+        listCamasData.addAll(singleton.getListaCamas());
+        return listCamasData;
+    }
+
+    private ObservableList<Habitacion> obtenerListaHabitacioness() {
+        listHabitacionesData.addAll(singleton.getListaHabitaciones());
+        return listHabitacionesData;
+    }
+
+    private ObservableList<Cliente> obtenerListaClientes() {
+        listClientesData.addAll(singleton.getListaClientes());
+        return listClientesData;
+    }
+
+
+    public void setMain(HelloApplication helloApplication) {
+        this.main = helloApplication;
+        tableHbabitacion.getItems().clear();
+        tableHbabitacion.setItems(obtenerListaHabitacioness());
+        TableCamas.getItems().clear();
+        TableCamas.setItems(obtenerListaCamas());
+        tableCliente.getItems().clear();
+        tableCliente.setItems(obtenerListaClientes());
+    }
 }
