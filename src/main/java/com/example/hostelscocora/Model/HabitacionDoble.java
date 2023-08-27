@@ -18,8 +18,8 @@ public class HabitacionDoble extends Habitacion implements Serializable {
     public HabitacionDoble() {
     }
 // Herencia de Producto:
-    public HabitacionDoble(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, int numCamasDobles, int numCamasSencillas, double precioNoche) {
-        super(id, tipo, isCamaExtra, isReservada);
+    public HabitacionDoble(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, int numCamasDobles, int numCamasSencillas, double precioNoche, String identificador) {
+        super(id, tipo, isCamaExtra, isReservada, identificador);
         this.numCamasDobles = numCamasDobles;
         this.numCamasSencillas = numCamasSencillas;
         this.precioNoche = precioNoche;

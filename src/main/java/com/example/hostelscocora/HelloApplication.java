@@ -1,12 +1,7 @@
 package com.example.hostelscocora;
 
-import com.example.hostelscocora.Controllers.HelloController;
-import com.example.hostelscocora.Controllers.InicioAdministratorViewController;
-import com.example.hostelscocora.Controllers.InicioSesionViewController;
-import com.example.hostelscocora.Controllers.RegistrarCuentaViewController;
-import com.example.hostelscocora.Model.Cliente;
-import com.example.hostelscocora.Model.Empleado;
-import com.example.hostelscocora.Model.Hostal;
+import com.example.hostelscocora.Controllers.*;
+import com.example.hostelscocora.Model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,6 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class HelloApplication extends Application {
@@ -38,11 +34,30 @@ public class HelloApplication extends Application {
        stage.setResizable(false);
        stage.show();
     }
-    public void abrirPanelEmpleado(Empleado empleadoLogeado) {
-
+    public void abrirPanelEmpleado(Empleado empleadoLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("inicioEmpleadoView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        IncioEmpleadoViewController controller = fxmlLoader.getController();
+        controller.setMain(this);
+        scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Tu inicio empleado");
+        stage.setResizable(false);
+        stage.show();
     }
 
-    public void abrirPanelCliente(Cliente clienteLogeado) {
+    public void abrirPanelCliente(Cliente clienteLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("inicioClienteView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        InicioClienteViewController controller = fxmlLoader.getController();
+        controller.setMain(this);
+        scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Tu inicio cliente");
+        stage.setResizable(false);
+        stage.show();
 
     }
     public void abrirPanelAdministrador() throws IOException {
@@ -69,13 +84,35 @@ public class HelloApplication extends Application {
         stage.setResizable(false);
         stage.show();
     }
+    public void abrirCrearEmpleado() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("crearEmpleadoView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        CrearEmpleadoViewController controller = fxmlLoader.getController();
+        controller.setMain(this);
+        scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Crea un empleado");
+        stage.setResizable(false);
+        stage.show();
 
-
+    }
+    public void abrirCrearProducto() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("agregarProductoView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        AgregarProductoController controller = fxmlLoader.getController();
+        controller.setMain(this);
+        scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Crea un empleado");
+        stage.setResizable(false);
+        stage.show();
+    }
 
     public static void main(String[] args) {
         launch();
     }
-
 
 
 }

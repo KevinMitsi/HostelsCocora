@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Persistencia {
     public static final String RUTA_ARCHIVO_EMPLEADOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoEmpleados.txt";
-    public static final String RUTA_ARCHIVO_USUARIOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoUsuarios.txt";
-    public static final String RUTA_ARCHIVO_CLIENTES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoClientes.txt";
+    public static final String RUTA_ARCHIVO_USUARIOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archvioCuentas.txt";
+    public static final String RUTA_ARCHIVO_CLIENTES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoClientes.txt";
     public static final String RUTA_ARCHIVO_RESERVAS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoReseras.txt";
     public static final String RUTA_ARCHIVO_CAMAS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoCamas.txt";
     public static final String RUTA_ARCHIVO_HABITACIONES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoHabitaciones.txt";

@@ -1,0 +1,74 @@
+ago 27, 2023 2:07:15 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:22:07 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:24:42 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:29:18 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:31:09 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:35:17 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:36:28 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:36:42 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:37:37 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:42:17 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:44:42 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 2:48:23 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 3:11:43 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 3:15:03 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 3:16:27 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 3:19:10 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 3:21:28 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 3:21:34 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 3:49:04 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 9:40:33 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 9:44:05 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:02:14 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:20:08 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:21:52 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:22:07 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:24:11 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:26:32 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:30:24 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 10:34:47 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 11:38:07 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 11:54:19 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 11:55:51 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 11:59:25 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 11:59:26 A. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 12:03:05 P. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 12:05:12 P. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27
+ago 27, 2023 12:08:26 P. M. com.example.hostelscocora.Persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesion,Inicio de sesion del usuario:pedro,2023-08-27

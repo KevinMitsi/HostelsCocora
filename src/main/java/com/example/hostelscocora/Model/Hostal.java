@@ -1,5 +1,6 @@
 package com.example.hostelscocora.Model;
 
+import com.example.hostelscocora.Controllers.Alerta;
 import com.example.hostelscocora.Persistencia.Persistencia;
 
 import java.io.Serializable;
@@ -9,12 +10,13 @@ import java.util.Objects;
 public class Hostal implements Serializable {
     private String nombre;
     private String direccion;
-    private ArrayList<Habitacion>listaHabitaciones= new ArrayList<>();
-    private ArrayList<Empleado>listaEmpleados= new ArrayList<>();
-    private ArrayList<Usuario>listaUsuarios= new ArrayList<>();
-    private ArrayList<Cliente>listaClientes= new ArrayList<>();
-    private ArrayList<Cama>listaCamas= new ArrayList<>();
-    private ArrayList<Reserva>listaReservas= new ArrayList<>();
+    private ArrayList<Habitacion>listaHabitaciones;
+    private ArrayList<Empleado>listaEmpleados;
+    private ArrayList<Usuario>listaUsuarios;
+    private ArrayList<Cliente>listaClientes;
+    private ArrayList<Cama>listaCamas;
+    private ArrayList<Reserva>listaReservas;
+    private ArrayList<Producto>listaProductos;
 
     /*---------------constructors---------------------*/
 
@@ -27,6 +29,7 @@ public class Hostal implements Serializable {
         this.listaClientes = new ArrayList<>();
         this.listaCamas = new ArrayList<>();
         this.listaReservas = new ArrayList<>();
+        this.listaProductos = new ArrayList<>();
     }
 
     public Hostal() {
@@ -36,6 +39,7 @@ public class Hostal implements Serializable {
         this.listaClientes = new ArrayList<>();
         this.listaCamas = new ArrayList<>();
         this.listaReservas = new ArrayList<>();
+        this.listaProductos = new ArrayList<>();
     }
 
     /*--------Getters && Setters---------*/
@@ -62,6 +66,14 @@ public class Hostal implements Serializable {
 
     public void setListaHabitaciones(ArrayList<Habitacion> listaHabitaciones) {
         this.listaHabitaciones = listaHabitaciones;
+    }
+
+    public ArrayList<Producto> getListaProductos() {
+        return listaProductos;
+    }
+
+    public void setListaProductos(ArrayList<Producto> listaProductos) {
+        this.listaProductos = listaProductos;
     }
 
     public ArrayList<Empleado> getListaEmpleados() {
@@ -165,39 +177,55 @@ public class Hostal implements Serializable {
     }
 
     public Cama crearCama(String id, TipoProducto tipo) throws Exception {
-        Cama cama = new Cama(id, tipo);
+        Cama cama = new Cama(id, tipo, "Cama");
         if(listaCamas.contains(cama)){
             throw new Exception("La cama ya existe");
         }
         else {
             listaCamas.add(cama);
             Persistencia.guardarArchivoCamas(listaCamas);
+            agregarProducto(cama);
             return cama;
         }
     }
 
     public HabitacionSencilla crearHabitacionSencilla(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, double precioNoche) throws Exception {
-        HabitacionSencilla habitacionSencilla = new HabitacionSencilla(id, tipo, isCamaExtra, isReservada, precioNoche);
+        HabitacionSencilla habitacionSencilla = new HabitacionSencilla(id, tipo, isCamaExtra, isReservada, precioNoche, "Habitacion");
         if (listaHabitaciones.contains(habitacionSencilla)){
             throw new Exception("Habitacion ya registrada");
         }
         else {
             listaHabitaciones.add(habitacionSencilla);
             Persistencia.guardarArchivoHabitaciones(listaHabitaciones);
+            listaProductos.add(habitacionSencilla);
+            Alerta.saltarAlertaConfirmacion("Se agregó el producto");
             return habitacionSencilla;
         }
     }
 
     public HabitacionDoble crearHabitacionDoble(String id, TipoProducto tipo, boolean isCamaExtra, boolean isReservada, int numCamasDobles, int numCamasSencillas, double precioNoche) throws Exception {
-        HabitacionDoble habitacionDoble = new HabitacionDoble(id, tipo, isCamaExtra, isReservada, numCamasDobles, numCamasSencillas, precioNoche);
+        HabitacionDoble habitacionDoble = new HabitacionDoble(id, tipo, isCamaExtra, isReservada, numCamasDobles, numCamasSencillas, precioNoche, "Habitacion");
         if(listaHabitaciones.contains(habitacionDoble)){
             throw new Exception("Esta habitacion ya existe");
         }
         else{
             listaHabitaciones.add(habitacionDoble);
+            Persistencia.guardarArchivoHabitaciones(listaHabitaciones);
+            listaProductos.add(habitacionDoble);
+            Alerta.saltarAlertaConfirmacion("Se agregó el producto");
             return habitacionDoble;
         }
 
+    }
+
+    public void agregarProducto(Producto producto) throws Exception {
+        if(listaProductos.contains(producto)){
+            throw new Exception("Producto ya agregado");
+        }
+        else{
+            Alerta.saltarAlertaConfirmacion("Producto agregado correctamente");
+            listaProductos.add(producto);
+        }
     }
   /*  -----------Delete Mehtods--------------*/
 
@@ -252,6 +280,14 @@ public class Hostal implements Serializable {
             throw new Exception("Esta habiacion no existe");
         }
     }
+    public void elimnarProducto(Producto producto) throws Exception {
+        if(listaProductos.contains(producto)){
+            listaProductos.remove(producto);
+         }
+        else {
+            throw new Exception("producto no existe");
+        }
+    }
 
     /*--------------------Others*-------------------------------*/
 
@@ -273,6 +309,8 @@ public class Hostal implements Serializable {
         }
         throw new Exception("Usuario no encontrado");
     }
+
+
 }
 
 

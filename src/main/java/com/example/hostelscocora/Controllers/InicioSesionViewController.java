@@ -29,25 +29,32 @@ public class InicioSesionViewController {
         String nombre = tfName.getText();
         String password = tfPassword.getText();
         if(verificarCampos(nombre, password, cbOpciones.getValue())){
-            if(cbOpciones.getValue().equals("Empleado")){
-              try{
-                  Empleado empleadoLogeado = singleton.iniciarSesionEmpleado(nombre,password);
-                  main.abrirPanelEmpleado(empleadoLogeado);
-              } catch (Exception e) {
-                  Alerta.saltarAlertaError(e.getMessage());
-              }
-            }
-            if(cbOpciones.getValue().equals("Cliente")){
-                try{
-                    Cliente clienteLogeado = singleton.iniciarSesionCliente(nombre,password);
-                    main.abrirPanelCliente(clienteLogeado);
-                } catch (Exception e) {
-                    Alerta.saltarAlertaError(e.getMessage());
-                }
-            }
             if(nombre.equals("admin")&&password.equals("admin123")&&cbOpciones.getValue().equals("Empleado")){
+                Alerta.saltarAlertaConfirmacion("Se ha iniciado sesión como administrador");
                 main.abrirPanelAdministrador();
             }
+            else {
+                if(cbOpciones.getValue().equals("Empleado")){
+                    try{
+                        Empleado empleadoLogeado = singleton.iniciarSesionEmpleado(nombre,password);
+                        Alerta.saltarAlertaConfirmacion("Se ha iniciado sesión como empleado");
+                        main.abrirPanelEmpleado(empleadoLogeado);
+                    } catch (Exception e) {
+                        Alerta.saltarAlertaError(e.getMessage());
+                    }
+                }
+                if(cbOpciones.getValue().equals("Cliente")){
+                    try{
+                        Cliente clienteLogeado = singleton.iniciarSesionCliente(nombre,password);
+                        Alerta.saltarAlertaConfirmacion("Se ha iniciado sesión como cliente");
+                        main.abrirPanelCliente(clienteLogeado);
+                    } catch (Exception e) {
+                        Alerta.saltarAlertaError(e.getMessage());
+                    }
+                }
+
+            }
+
         }
         else {
             Alerta.saltarAlertaError("VERIFIQUE LOS CAMPOS");

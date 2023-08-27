@@ -1,5 +1,10 @@
 package com.example.hostelscocora.Model;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
@@ -98,4 +103,5 @@ public class Reserva implements Serializable {
     public int hashCode() {
         return Objects.hash(getId(), getNombreCliente(), getIdHabitacion());
     }
+
 }
