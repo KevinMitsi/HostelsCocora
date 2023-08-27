@@ -1,5 +1,7 @@
 package com.example.hostelscocora.Model;
 
+import com.example.hostelscocora.Persistencia.Persistencia;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -7,12 +9,12 @@ import java.util.Objects;
 public class Hostal implements Serializable {
     private String nombre;
     private String direccion;
-    private ArrayList<Habitacion>listaHabitaciones;
-    private ArrayList<Empleado>listaEmpleados;
-    private ArrayList<Usuario>listaUsuarios;
-    private ArrayList<Cliente>listaClientes;
-    private ArrayList<Cama>listaCamas;
-    private ArrayList<Reserva>listaReservas;
+    private ArrayList<Habitacion>listaHabitaciones= new ArrayList<>();
+    private ArrayList<Empleado>listaEmpleados= new ArrayList<>();
+    private ArrayList<Usuario>listaUsuarios= new ArrayList<>();
+    private ArrayList<Cliente>listaClientes= new ArrayList<>();
+    private ArrayList<Cama>listaCamas= new ArrayList<>();
+    private ArrayList<Reserva>listaReservas= new ArrayList<>();
 
     /*---------------constructors---------------------*/
 
@@ -28,6 +30,12 @@ public class Hostal implements Serializable {
     }
 
     public Hostal() {
+        this.listaHabitaciones = new ArrayList<>();
+        this.listaEmpleados = new ArrayList<>();
+        this.listaUsuarios = new ArrayList<>();
+        this.listaClientes = new ArrayList<>();
+        this.listaCamas = new ArrayList<>();
+        this.listaReservas = new ArrayList<>();
     }
 
     /*--------Getters && Setters---------*/
@@ -101,15 +109,7 @@ public class Hostal implements Serializable {
     @Override
     public String toString() {
         return "Hostal{" +
-                "nombre='" + nombre + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", listaHabitaciones=" + listaHabitaciones +
-                ", listaEmpleados=" + listaEmpleados +
-                ", listaUsuarios=" + listaUsuarios +
-                ", listaClientes=" + listaClientes +
-                ", listaCamas=" + listaCamas +
-                ", listaReservas=" + listaReservas +
-                '}';
+                "nombre='" + nombre;
     }
 
     @Override
@@ -135,6 +135,7 @@ public class Hostal implements Serializable {
         }
         else{
             listaUsuarios.add(user);
+            Persistencia.guardarArchivoUsuarios(listaUsuarios);
             return user;
         }
     }
@@ -146,6 +147,7 @@ public class Hostal implements Serializable {
         }
         else{
             listaEmpleados.add(empleado);
+            Persistencia.guardarArchivoEmpleados(listaEmpleados);
             return empleado;
         }
     }
@@ -157,6 +159,7 @@ public class Hostal implements Serializable {
         }
         else{
             listaClientes.add(cliente);
+            Persistencia.guardarArchivoClientes(listaClientes);
             return cliente;
         }
     }
@@ -168,6 +171,7 @@ public class Hostal implements Serializable {
         }
         else {
             listaCamas.add(cama);
+            Persistencia.guardarArchivoCamas(listaCamas);
             return cama;
         }
     }
@@ -179,6 +183,7 @@ public class Hostal implements Serializable {
         }
         else {
             listaHabitaciones.add(habitacionSencilla);
+            Persistencia.guardarArchivoHabitaciones(listaHabitaciones);
             return habitacionSencilla;
         }
     }
@@ -199,6 +204,8 @@ public class Hostal implements Serializable {
     public void eliminarUsuario(Usuario usuario) throws Exception {
         if(listaUsuarios.contains(usuario)){
             listaUsuarios.remove(usuario);
+            Persistencia.guardarArchivoUsuarios(listaUsuarios);
+
         }
         else {
             throw new Exception("El usuario no existe");
@@ -208,6 +215,7 @@ public class Hostal implements Serializable {
     public void eliminarEmpleado(Empleado empleado) throws Exception {
         if(listaEmpleados.contains(empleado)){
             listaEmpleados.remove(empleado);
+            Persistencia.guardarArchivoEmpleados(listaEmpleados);
         }
         else {
             throw new Exception("El empleado no existe");
@@ -217,6 +225,8 @@ public class Hostal implements Serializable {
     public void eliminarCliente(Cliente cliente) throws Exception {
         if (listaClientes.contains(cliente)){
             listaClientes.remove(cliente);
+            Persistencia.guardarArchivoClientes(listaClientes);
+
         }
         else{
             throw new Exception("El cliente no existe");
@@ -226,6 +236,7 @@ public class Hostal implements Serializable {
     public void eliminarCama(Cama cama) throws Exception {
         if(listaCamas.contains(cama)){
             listaCamas.remove(cama);
+            Persistencia.guardarArchivoCamas(listaCamas);
         }
         else{
             throw new Exception("La cama no existe");
@@ -235,13 +246,33 @@ public class Hostal implements Serializable {
     public void eliminarHabitacion(Habitacion habitacion) throws Exception {
         if (listaHabitaciones.contains(habitacion)){
             listaHabitaciones.remove(habitacion);
+            Persistencia.guardarArchivoHabitaciones(listaHabitaciones);
         }
         else{
             throw new Exception("Esta habiacion no existe");
         }
     }
 
+    /*--------------------Others*-------------------------------*/
 
+    public Empleado iniciarSesionEmpleado(String username, String password) throws Exception {
+        for (Empleado empleado: listaEmpleados) {
+            if (empleado.getUsuario().getUsername().equals(username)&&empleado.getUsuario().getContrasena().equals(password)){
+                return empleado;
+            }
+        }
+        throw new Exception("Usuario no encontrado");
+    }
+
+    public Cliente iniciarSesionCliente(String username, String password) throws Exception {
+        for (Cliente cliente: listaClientes
+             ) {
+            if(cliente.getUsuario().getUsername().equals(username)&&cliente.getUsuario().getContrasena().equals(password)){
+                return cliente;
+            }
+        }
+        throw new Exception("Usuario no encontrado");
+    }
 }
 
 

@@ -11,7 +11,9 @@ public class Persistencia {
     public static final String RUTA_ARCHIVO_USUARIOS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoUsuarios.txt";
     public static final String RUTA_ARCHIVO_CLIENTES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelcocora\\archivos\\archivoClientes.txt";
     public static final String RUTA_ARCHIVO_RESERVAS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoReseras.txt";
-    public static final String RUTA_ARCHIVO_LOG = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\SnowaloweLog.txt";
+    public static final String RUTA_ARCHIVO_CAMAS = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoCamas.txt";
+    public static final String RUTA_ARCHIVO_HABITACIONES = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\archivoHabitaciones.txt";
+    public static final String RUTA_ARCHIVO_LOG = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\HostelsLog.txt";
     public static final String RUTA_ARCHIVO_MODELO_HOTAL_BINARIO = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\model.dat";
     public static final String RUTA_ARCHIVO_MODELO_HOSTAL_XML = "C:\\Users\\Kevin\\Documents\\GitHub\\HostelsCocora\\src\\main\\java\\com\\example\\hostelscocora\\archivos\\model.xml";
 
@@ -70,7 +72,23 @@ public class Persistencia {
         ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_RESERVAS, contenido, false);
     }
 
+    public static void guardarArchivoCamas(ArrayList<Cama> listCamas) throws IOException {
+        String contenido="";
+        for (Cama cama: listCamas
+             ) {
+            contenido+=cama.getId()+","+cama.getEstado()+","+cama.getTipo()+"\n";
+        }
+        ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_CAMAS, contenido, false);
+    }
 
+    public static void guardarArchivoHabitaciones(ArrayList<Habitacion> listHabitaciones) throws IOException {
+        String contenido="";
+        for (Habitacion habitacion:listHabitaciones
+             ) {
+            contenido+=habitacion.getId()+","+habitacion.getTipo()+","+habitacion.getEstado()+"\n";
+        }
+        ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_HABITACIONES, contenido, false);
+    }
 
     public static void guardaRegistroLog(String mensajeLog, int nivel, String accion)
     {
@@ -130,6 +148,4 @@ public class Persistencia {
             e.printStackTrace();
         }
     }
-
-
 }
