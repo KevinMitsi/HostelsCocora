@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hostelscocora.Controllers.InicioClienteViewController">
-    <children>
-        <Button fx:id="btnReservar" layoutX="109.0" layoutY="312.0" mnemonicParsing="false" onAction="#onReservarButtonClick" text="Reservar" />
-        <Button fx:id="btnRegresar" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#onRegresarButtonClick" text="Regresar">
-            <font>
-                <Font size="10.0" />
-            </font></Button>
-        <Button fx:id="bntEliminarReserva" layoutX="190.0" layoutY="312.0" mnemonicParsing="false" onAction="#onEliminarReservaButtonClick" text="EliminarReserva" />
-        <TableView fx:id="tableReservarCliente" layoutX="109.0" layoutY="100.0" prefHeight="200.0" prefWidth="382.0">
-            <columns>
-                <TableColumn fx:id="colUsuarioReservarCliente" prefWidth="114.66667938232422" text="Usuario" />
-                <TableColumn fx:id="colIDReservaReservarCliente" prefWidth="164.00001525878906" text="IDReserva" />
-                <TableColumn fx:id="colCamaExtraReservarCliente" prefWidth="102.66668701171875" text="Cama extra" />
-            </columns>
-        </TableView>
-        <Label fx:id="tfReservas" layoutX="249.0" layoutY="47.0" text="RESERVAS">
-            <font>
-                <Font name="System Bold" size="21.0" />
-            </font>
-        </Label>
-    </children>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.hostelscocora.Controllers.InicioClienteViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
 </AnchorPane>
