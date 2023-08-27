@@ -24,6 +24,6 @@
         </columns>
       </TableView>
       <Button fx:id="btnReservar" layoutX="120.0" layoutY="329.0" mnemonicParsing="false" onAction="#onReservatButtonClick" text="Reservar" />
-      <Button fx:id="btnAtras" layoutX="261.0" layoutY="329.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atrás" />
+      <Button fx:id="btnAtras" layoutX="254.0" layoutY="329.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atrás" />
    </children>
 </AnchorPane>
