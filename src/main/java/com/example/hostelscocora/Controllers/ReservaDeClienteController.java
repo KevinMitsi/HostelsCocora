@@ -11,8 +11,6 @@ public class ReservaDeClienteController {
     @FXML
     private Button btnAtras;
 
-    @FXML
-    private Button btnReservar;
 
     @FXML
     private TableColumn<?, ?> colEntradaReservas;
@@ -34,9 +32,5 @@ public class ReservaDeClienteController {
 
     }
 
-    @FXML
-    void onReservatButtonClick(ActionEvent event) {
-
-    }
 
 }
