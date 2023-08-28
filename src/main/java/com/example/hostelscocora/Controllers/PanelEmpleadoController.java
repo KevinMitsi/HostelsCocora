@@ -59,6 +59,8 @@ public class PanelEmpleadoController {
 
     @FXML
     private TableColumn<Habitacion, TipoProducto> colTipoHabitaciones;
+    public TableColumn<Habitacion, Boolean> colIsReservada;
+
 
     @FXML
     private TableView<Cliente> tableCliente;
@@ -83,7 +85,6 @@ public class PanelEmpleadoController {
 
     @FXML
     void onIdCamaButtonClick(ActionEvent event) throws IOException {
-        main.abrirAmpliarCama(camaSeleccionada, empleadoLogeado);
     }
 
     @FXML
@@ -114,6 +115,7 @@ public class PanelEmpleadoController {
         colIdHabitaciones.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getId()));
         colEsatdoHabitaciones.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getEstado()));
         colTipoHabitaciones.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getTipo()));
+        colIsReservada.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().isReservada()));
         tableHbabitacion.refresh();
 
         tableHbabitacion.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
@@ -158,13 +160,26 @@ public class PanelEmpleadoController {
         this.empleadoLogeado=empleadoLogeado;
     }
 
-    public void onAmpliarButtonClick(ActionEvent actionEvent) {
+    public void onAmpliarButtonClick(ActionEvent actionEvent) throws IOException {
+        if(camaSeleccionada==null){
+            Alerta.saltarAlertaError("No ha seleccionado ninguna cama");
+        }
+        else{
+            main.abrirAmpliarCama(camaSeleccionada, empleadoLogeado);
+        }
+
     }
 
     public void onActionButtonClick(ActionEvent actionEvent) throws IOException {
         main.inicializarLogin();
     }
 
-    public void onAmpliarHabitacionButtonClick(ActionEvent actionEvent) {
+    public void onAmpliarHabitacionButtonClick(ActionEvent actionEvent) throws IOException {
+        if(habitacionSeleccionada==null){
+            Alerta.saltarAlertaError("No se ha seleccionado ninguna habitacion");
+        }
+        else {
+            main.abrirAmpliarHabitacion(habitacionSeleccionada,empleadoLogeado);
+        }
     }
 }
