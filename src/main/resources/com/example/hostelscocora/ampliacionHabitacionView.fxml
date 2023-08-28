@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="234.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hostelscocora.Controllers.AmpliacionHabitacionViewController">
+<AnchorPane prefHeight="308.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hostelscocora.Controllers.AmpliacionHabitacionViewController">
    <children>
-      <Button fx:id="btnEnviar" layoutX="245.0" layoutY="162.0" mnemonicParsing="false" onAction="#onEnviarButtonClick" text="Enviar" />
-      <Button fx:id="btnAtras" layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atras">
+      <Button fx:id="btnEnviar" layoutX="244.0" layoutY="237.0" mnemonicParsing="false" onAction="#onEnviarButtonClick" text="Enviar" />
+      <Button fx:id="btnAtras" layoutX="14.0" layoutY="272.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atras">
          <font>
             <Font size="10.0" />
          </font>
@@ -22,5 +19,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
+      <Label layoutX="245.0" layoutY="154.0" text="resevada" />
+      <ComboBox fx:id="cbxReservada" layoutX="194.0" layoutY="186.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

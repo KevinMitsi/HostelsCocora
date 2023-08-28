@@ -121,9 +121,24 @@ public class HelloApplication extends Application {
         stage.setResizable(false);
         stage.show();
     }
+    public void abrirAmpliarHabitacion(Habitacion habitacionSeleccionada, Empleado empleadoLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ampliacionHabitacionView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        AmpliacionHabitacionViewController controller = fxmlLoader.getController();
+        controller.setMain(this);
+        controller.setHabitacionSeleccionada(habitacionSeleccionada);
+        controller.setEmpleadoLoggeado(empleadoLogeado);
+        scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Ampliar cama");
+        stage.setResizable(false);
+        stage.show();
+    }
     public static void main(String[] args) {
         launch();
     }
+
 
 
 }
