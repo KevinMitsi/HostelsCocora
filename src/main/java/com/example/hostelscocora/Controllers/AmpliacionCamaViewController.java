@@ -37,19 +37,29 @@ public class AmpliacionCamaViewController {
     }
 
     @FXML
-    void onEnviarButtonClick(ActionEvent event) {
-
+    void onEnviarButtonClick(ActionEvent event) throws IOException {
+        String id = tfIdHabitacion.getText();
+        EstadoProducto estadoProducto = cbxEstado.getValue();
+        if (verificarCampos(id, estadoProducto)){
+            singleton.cambiarCama(camaSeleccionada,id,estadoProducto);
+            singleton.guardarResourceXML();
+            singleton.guardarResourceBinario();
+        }
+        else {
+            Alerta.saltarAlertaError("Verifique los campos");
+        }
     }
 
     @FXML
     void initialize(){
-        cbxEstado.getItems().add(EstadoProducto.DISPONIBLE);
+         cbxEstado.getItems().add(EstadoProducto.DISPONIBLE);
         cbxEstado.getItems().add(EstadoProducto.MANTENIMIENTO);
         cbxEstado.getItems().add(EstadoProducto.OPERACION);
     }
 
     public void setMain(HelloApplication helloApplication) {
         this.main=helloApplication;
+        tfIdHabitacion.setPromptText(camaSeleccionada.getIdHabitacionContiene());
     }
 
     public void setCamaSeleccionada(Cama camaSeleccionada) {
@@ -59,4 +69,14 @@ public class AmpliacionCamaViewController {
     public void setEmpleadoLoggeado(Empleado empleadoLogeado) {
         this.empleadoLoggeado=empleadoLogeado;
     }
+    private boolean verificarCampos(String a, EstadoProducto id) {
+        if(a.isBlank()){
+            return false;
+        }
+        if(id==null){
+            return false;
+        }
+        return true;
+    }
+
 }

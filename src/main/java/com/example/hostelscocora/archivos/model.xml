@@ -36,6 +36,90 @@
     </object>
    </void>
   </void>
+  <void property="listaClientes">
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Cliente">
+     <void property="cedula">
+      <string>147</string>
+     </void>
+     <void property="listaReservas">
+      <object class="java.util.ArrayList">
+       <void method="add">
+        <object class="com.example.hostelscocora.Model.Reserva">
+         <void property="id">
+          <string>4</string>
+         </void>
+         <void property="idHabitacion">
+          <string>1</string>
+         </void>
+         <void property="nombreCliente">
+          <string>Patricio Lopez</string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="com.example.hostelscocora.Model.Reserva">
+         <void property="id">
+          <string>7</string>
+         </void>
+         <void property="idHabitacion">
+          <string>2</string>
+         </void>
+         <void property="nombreCliente">
+          <string>Patricio Lopez</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void property="nombre">
+      <string>Patricio Lopez</string>
+     </void>
+     <void property="usuario">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario0">
+       <void property="contrasena">
+        <string>123</string>
+       </void>
+       <void property="tipo">
+        <object class="java.lang.Enum" id="TipoUsuario0" method="valueOf">
+         <class>com.example.hostelscocora.Model.TipoUsuario</class>
+         <string>CLIENTE</string>
+        </object>
+       </void>
+       <void property="username">
+        <string>pat</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Cliente">
+     <void property="cedula">
+      <string>5555</string>
+     </void>
+     <void property="listaReservas">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nombre">
+      <string>bhjhb</string>
+     </void>
+     <void property="usuario">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario1">
+       <void property="contrasena">
+        <string>123</string>
+       </void>
+       <void property="tipo">
+        <object idref="TipoUsuario0"/>
+       </void>
+       <void property="username">
+        <string>knjjnj</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
   <void property="listaEmpleados">
    <void method="add">
     <object class="com.example.hostelscocora.Model.Empleado">
@@ -49,12 +133,12 @@
       <string>kevina</string>
      </void>
      <void property="usuario">
-      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario0">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario2">
        <void property="contrasena">
         <string>123</string>
        </void>
        <void property="tipo">
-        <object class="java.lang.Enum" id="TipoUsuario0" method="valueOf">
+        <object class="java.lang.Enum" id="TipoUsuario1" method="valueOf">
          <class>com.example.hostelscocora.Model.TipoUsuario</class>
          <string>EMPLEADO</string>
         </object>
@@ -78,12 +162,12 @@
       <string>AnaSofia</string>
      </void>
      <void property="usuario">
-      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario1">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario3">
        <void property="contrasena">
         <string>123</string>
        </void>
        <void property="tipo">
-        <object idref="TipoUsuario0"/>
+        <object idref="TipoUsuario1"/>
        </void>
        <void property="username">
         <string>ana</string>
@@ -104,15 +188,41 @@
       <string>otro</string>
      </void>
      <void property="usuario">
-      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario2">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario4">
        <void property="contrasena">
         <string>123</string>
        </void>
        <void property="tipo">
-        <object idref="TipoUsuario0"/>
+        <object idref="TipoUsuario1"/>
        </void>
        <void property="username">
         <string>otro</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Empleado">
+     <void property="cedula">
+      <string>111111</string>
+     </void>
+     <void property="listaPlanillas">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nombre">
+      <string>empleado</string>
+     </void>
+     <void property="usuario">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario5">
+       <void property="contrasena">
+        <string>123</string>
+       </void>
+       <void property="tipo">
+        <object idref="TipoUsuario1"/>
+       </void>
+       <void property="username">
+        <string>empleado</string>
        </void>
       </object>
      </void>
@@ -127,6 +237,9 @@
      </void>
      <void property="precioNoche">
       <double>240000.0</double>
+     </void>
+     <void property="reservada">
+      <boolean>true</boolean>
      </void>
      <void property="tipo">
       <object idref="TipoProducto0"/>
@@ -143,6 +256,9 @@
      </void>
      <void property="precioNoche">
       <double>360000.0</double>
+     </void>
+     <void property="reservada">
+      <boolean>true</boolean>
      </void>
      <void property="tipo">
       <object class="java.lang.Enum" id="TipoProducto1" method="valueOf">
@@ -179,10 +295,10 @@
   </void>
   <void property="listaUsuarios">
    <void method="add">
-    <object idref="Usuario0"/>
+    <object idref="Usuario2"/>
    </void>
    <void method="add">
-    <object idref="Usuario1"/>
+    <object idref="Usuario3"/>
    </void>
    <void method="add">
     <object class="com.example.hostelscocora.Model.Usuario">
@@ -190,7 +306,7 @@
       <string>otro</string>
      </void>
      <void property="tipo">
-      <object idref="TipoUsuario0"/>
+      <object idref="TipoUsuario1"/>
      </void>
      <void property="username">
       <string>otro</string>
@@ -198,7 +314,16 @@
     </object>
    </void>
    <void method="add">
-    <object idref="Usuario2"/>
+    <object idref="Usuario4"/>
+   </void>
+   <void method="add">
+    <object idref="Usuario0"/>
+   </void>
+   <void method="add">
+    <object idref="Usuario5"/>
+   </void>
+   <void method="add">
+    <object idref="Usuario1"/>
    </void>
   </void>
  </object>

@@ -74,8 +74,8 @@ public class PanelEmpleadoController {
 
 
     @FXML
-    void onCrearClienteButtonClick(ActionEvent event) {
-
+    void onCrearClienteButtonClick(ActionEvent event) throws IOException {
+        main.abrirCrearCliente(empleadoLogeado);
     }
 
     @FXML
@@ -93,8 +93,13 @@ public class PanelEmpleadoController {
     }
 
     @FXML
-    void onReservasClienteButtonClick(ActionEvent event) {
-
+    void onReservasClienteButtonClick(ActionEvent event) throws IOException {
+        if(clienteSeleccionado==null){
+            Alerta.saltarAlertaError("No ha seleccionado ningun cliente");
+        }
+        else{
+            main.abrirVerReservasCliente(clienteSeleccionado, empleadoLogeado);
+        }
     }
 
     @FXML

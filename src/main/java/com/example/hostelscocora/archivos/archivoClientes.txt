@@ -1,0 +1,2 @@
+Patricio Lopez,147,[Reserva{id='4', fechaInicio=null, fechaSalida=null, diasDuracionReserva=0, nombreCliente='Patricio Lopez', idHabitacion='1'}, Reserva{id='7', fechaInicio=null, fechaSalida=null, diasDuracionReserva=0, nombreCliente='Patricio Lopez', idHabitacion='2'}]
+bhjhb,5555,[]

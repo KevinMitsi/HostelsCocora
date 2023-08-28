@@ -3,6 +3,7 @@ package com.example.hostelscocora.Controllers;
 import com.example.hostelscocora.Model.*;
 import com.example.hostelscocora.Persistencia.Persistencia;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ModelFactoryController {
@@ -70,6 +71,16 @@ public class ModelFactoryController {
     }
     public ArrayList<Producto> getListaProdcutos(){ return hostal.getListaProductos();
     }
+    public void cambiarCama(Cama cama, String id, EstadoProducto estadoProducto) throws IOException {
+        hostal.cambiarCama(cama,id,estadoProducto);
+    }
+    public void cambiarHabitacion(Habitacion habitacion, EstadoProducto estadoProducto, boolean isReservada) throws IOException {
+        hostal.cambiarHabitacion(habitacion,estadoProducto,isReservada);
+    }
+    public ArrayList<Habitacion> getListaHabitacionesDisponibles(){
+        return hostal.getListaHabitacionesDisponibles();
+    }
+
 
 
 

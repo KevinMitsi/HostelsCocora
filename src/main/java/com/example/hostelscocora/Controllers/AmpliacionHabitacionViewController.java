@@ -12,6 +12,8 @@ import javafx.scene.control.ComboBox;
 import java.io.IOException;
 
 public class AmpliacionHabitacionViewController {
+    ModelFactoryController singleton = ModelFactoryController.getInstance();
+    public ComboBox<Boolean> cbxReservada;
     Habitacion habitacionSeleccionando;
     Empleado empleadoLoggeado;
     HelloApplication main;
@@ -31,13 +33,13 @@ public class AmpliacionHabitacionViewController {
     }
 
     @FXML
-    void onEnviarButtonClick(ActionEvent event) {
-        if(cbxEstado==null){
+    void onEnviarButtonClick(ActionEvent event) throws IOException {
+        if(cbxEstado==null||cbxReservada==null){
             Alerta.saltarAlertaError("Seleccione un estado de la Habitacion");
         }
         else {
-            habitacionSeleccionando.setEstado(cbxEstado.getValue());
-        }
+            singleton.cambiarHabitacion(habitacionSeleccionando,cbxEstado.getValue(),cbxReservada.getValue());
+            }
     }
 
     public void setMain(HelloApplication helloApplication) {
@@ -57,5 +59,7 @@ public class AmpliacionHabitacionViewController {
         cbxEstado.getItems().add(EstadoProducto.DISPONIBLE);
         cbxEstado.getItems().add(EstadoProducto.OPERACION);
         cbxEstado.getItems().add(EstadoProducto.MANTENIMIENTO);
+        cbxReservada.getItems().add(true);
+        cbxReservada.getItems().add(false);
     }
 }

@@ -49,8 +49,9 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("inicioClienteView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         InicioClienteViewController controller = fxmlLoader.getController();
+        controller.setCliente(clienteLogeado);
         controller.setMain(this);
-        scene.getStylesheets().clear();
+         scene.getStylesheets().clear();
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
         stage.setTitle("Tu inicio cliente");
@@ -111,10 +112,10 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ampliacionCamaView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         AmpliacionCamaViewController controller = fxmlLoader.getController();
-        controller.setMain(this);
         controller.setCamaSeleccionada(camaSeleccionada);
         controller.setEmpleadoLoggeado(empleadoLogeado);
-        scene.getStylesheets().clear();
+        controller.setMain(this);
+       scene.getStylesheets().clear();
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
         stage.setTitle("Ampliar cama");
@@ -125,10 +126,10 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ampliacionHabitacionView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         AmpliacionHabitacionViewController controller = fxmlLoader.getController();
-        controller.setMain(this);
         controller.setHabitacionSeleccionada(habitacionSeleccionada);
         controller.setEmpleadoLoggeado(empleadoLogeado);
-        scene.getStylesheets().clear();
+        controller.setMain(this);
+         scene.getStylesheets().clear();
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
         stage.setTitle("Ampliar cama");
@@ -140,5 +141,48 @@ public class HelloApplication extends Application {
     }
 
 
+    public void abrirCrearCliente(Empleado empleadoLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("creadorCliente.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        CreadorClienteViewController controller = fxmlLoader.getController();
+        controller.setEmpleadoLogeado(empleadoLogeado);
+        controller.setMain(this);
+         scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Crea un cliente");
+        stage.setResizable(false);
+        stage.show();
+    }
 
+    public void abrirVerReservasCliente(Cliente clienteSeleccionado, Empleado empleadoLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("reservaDeCliente.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        ReservaDeClienteController controller = fxmlLoader.getController();
+        controller.setEmpleadoLogeado(empleadoLogeado);
+        controller.setClienteLogeado(clienteSeleccionado);
+        controller.setMain(this);
+        scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Reservas de cliente");
+        stage.setResizable(false);
+        stage.show();
+
+
+    }
+
+    public void abrirNuevaReserva(Cliente clienteLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("nuevaReservaView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        NuevaReservaViewController controller = fxmlLoader.getController();
+        controller.setClienteLogeado(clienteLogeado);
+        controller.setMain(this);
+         scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Reservas de cliente");
+        stage.setResizable(false);
+        stage.show();
+    }
 }

@@ -1,5 +1,7 @@
 package com.example.hostelscocora.Model;
 
+import com.example.hostelscocora.Controllers.Alerta;
+import com.example.hostelscocora.Persistencia.Persistencia;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -78,7 +80,15 @@ public class Cliente implements Serializable {
         return Objects.hash(getNombre(), getCedula(), getUsuario());
     }
 
-    public static void crearReserva(String nombre, Date fechaIngreso, Date fechaSalida, String idHabitacion){
+    public void crearReserva(Reserva reserva) throws Exception {
+        if (listaReservas.contains(reserva)){
+            throw new Exception("Ya se hizo esta reserva");
+        }
+        else {
+            listaReservas.add(reserva);
+            Persistencia.guardarArchivoReservas(listaReservas);
+            Alerta.saltarAlertaConfirmacion("Reserva creada exitosamente");
+        }
     }
     public static void editarReserva(Reserva reserva){
 
