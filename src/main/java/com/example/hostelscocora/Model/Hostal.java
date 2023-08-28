@@ -3,6 +3,7 @@ package com.example.hostelscocora.Model;
 import com.example.hostelscocora.Controllers.Alerta;
 import com.example.hostelscocora.Persistencia.Persistencia;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -311,6 +312,28 @@ public class Hostal implements Serializable {
     }
 
 
+    public void cambiarCama(Cama cama, String id, EstadoProducto estadoProducto) throws IOException {
+        cama.setIdHabitacionContiene(id);
+        cama.setEstado(estadoProducto);
+        Persistencia.guardarArchivoCamas(listaCamas);
+    }
+
+    public void cambiarHabitacion(Habitacion habitacion, EstadoProducto estadoProducto, boolean isReservada) throws IOException {
+        habitacion.setEstado(estadoProducto);
+        habitacion.setReservada(isReservada);
+        Persistencia.guardarArchivoHabitaciones(listaHabitaciones);
+    }
+
+    public ArrayList<Habitacion> getListaHabitacionesDisponibles() {
+        ArrayList<Habitacion>habitacions = new ArrayList<>();
+        for (Habitacion habitacion: listaHabitaciones
+             ) {
+            if(!habitacion.isReservada()){
+                habitacions.add(habitacion);
+            }
+        }
+        return habitacions;
+    }
 }
 
 

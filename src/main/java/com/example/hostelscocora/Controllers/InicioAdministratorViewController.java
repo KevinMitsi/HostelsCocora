@@ -14,6 +14,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class InicioAdministratorViewController {
@@ -48,9 +49,9 @@ public class InicioAdministratorViewController {
         @FXML
         private TableColumn<Reserva, String> colHabitacionReserva;
         @FXML
-        private TableColumn<Reserva, Date> colEntradaReserva;
+        private TableColumn<Reserva, LocalDate> colEntradaReserva;
         @FXML
-        private TableColumn<Reserva, Date> colSalidaReserva;
+        private TableColumn<Reserva, LocalDate> colSalidaReserva;
 
         @FXML
         private TableView<Producto> tableProducto;

@@ -2,3 +2,6 @@ kevin,123,EMPLEADO
 ana,123,EMPLEADO
 otro,otro,EMPLEADO
 otro,123,EMPLEADO
+pat,123,CLIENTE
+empleado,123,EMPLEADO
+knjjnj,123,CLIENTE

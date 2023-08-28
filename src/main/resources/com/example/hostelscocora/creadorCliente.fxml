@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hostelscocora.Controllers.CreadorClienteViewController">
+    <children>
+        <Button fx:id="btnBack" layoutX="23.0" layoutY="360.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Volver">
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Button>
+        <Label layoutX="172.0" layoutY="34.0" text="REGISTRAR CLIENTE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="172.0" layoutY="111.0" text="Nombre completo" />
+        <Button fx:id="btnSignup" layoutX="263.0" layoutY="311.0" mnemonicParsing="false" onAction="#onSignupButtonClick" text="Registrarse" />
+        <Label layoutX="172.0" layoutY="157.0" text="Cédula" />
+        <Label layoutX="172.0" layoutY="248.0" text="Contraseña" />
+        <Label layoutX="172.0" layoutY="204.0" text="Usuario" />
+        <TextField fx:id="tfPassword" layoutX="301.0" layoutY="244.0" promptText="contraseña" />
+        <TextField fx:id="tfUsername" layoutX="301.0" layoutY="200.0" promptText="usuario" />
+        <TextField fx:id="tfId" layoutX="301.0" layoutY="153.0" promptText="cédula" />
+        <TextField fx:id="tfName" layoutX="301.0" layoutY="107.0" promptText="nombre" />
+    </children>
+
+</AnchorPane>

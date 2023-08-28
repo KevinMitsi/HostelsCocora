@@ -14,9 +14,9 @@
         <Button fx:id="bntEliminarReserva" layoutX="231.0" layoutY="312.0" mnemonicParsing="false" onAction="#onEliminarReservaButtonClick" text="EliminarReserva" />
         <TableView fx:id="tableReservarCliente" layoutX="109.0" layoutY="100.0" prefHeight="200.0" prefWidth="382.0">
             <columns>
-                <TableColumn fx:id="colUsuarioReservarCliente" prefWidth="114.66667938232422" text="Usuario" />
+                <TableColumn fx:id="colUsuarioReservarCliente" prefWidth="114.66667938232422" text="IdHabitacion" />
                 <TableColumn fx:id="colIDReservaReservarCliente" prefWidth="164.00001525878906" text="IDReserva" />
-                <TableColumn fx:id="colCamaExtraReservarCliente" prefWidth="102.66668701171875" text="Cama extra" />
+                <TableColumn fx:id="colCamaExtraReservarCliente" prefWidth="102.66668701171875" text="Fecha" />
             </columns>
         </TableView>
         <Label fx:id="tfReservas" layoutX="249.0" layoutY="47.0" text="RESERVAS">

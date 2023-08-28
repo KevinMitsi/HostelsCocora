@@ -13,18 +13,17 @@ import java.util.Objects;
 public class Reserva implements Serializable {
 
     private String id;
-    private Date fechaInicio;
-    private Date fechaSalida;
+    private LocalDate fechaInicio;
+    private LocalDate fechaSalida;
     private int diasDuracionReserva;
     private String nombreCliente;
     private String idHabitacion;
 
-    public Reserva(String id, Date fechaInicio, Date fechaSalida, int diasDuracionReserva, String nombreCliente, String idHabitacion) {
+    public Reserva(String id, LocalDate fechaInicio, LocalDate fechaSalida, String nombreCliente, String idHabitacion) {
         this.id = id;
         this.fechaInicio = fechaInicio;
         this.fechaSalida = fechaSalida;
-        this.diasDuracionReserva = diasDuracionReserva;
-        this.nombreCliente = nombreCliente;
+         this.nombreCliente = nombreCliente;
         this.idHabitacion = idHabitacion;
     }
 
@@ -39,19 +38,19 @@ public class Reserva implements Serializable {
         this.id = id;
     }
 
-    public Date getFechaInicio() {
+    public LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaSalida() {
+    public LocalDate getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(Date fechaSalida) {
+    public void setFechaSalida(LocalDate fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 
