@@ -25,6 +25,16 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Cama" id="Cama1">
+     <void property="id">
+      <string>5</string>
+     </void>
+     <void property="tipo">
+      <object idref="TipoProducto0"/>
+     </void>
+    </object>
+   </void>
   </void>
   <void property="listaEmpleados">
    <void method="add">
@@ -77,6 +87,32 @@
        </void>
        <void property="username">
         <string>ana</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.example.hostelscocora.Model.Empleado">
+     <void property="cedula">
+      <string>1222</string>
+     </void>
+     <void property="listaPlanillas">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nombre">
+      <string>otro</string>
+     </void>
+     <void property="usuario">
+      <object class="com.example.hostelscocora.Model.Usuario" id="Usuario2">
+       <void property="contrasena">
+        <string>123</string>
+       </void>
+       <void property="tipo">
+        <object idref="TipoUsuario0"/>
+       </void>
+       <void property="username">
+        <string>otro</string>
        </void>
       </object>
      </void>
@@ -137,6 +173,9 @@
    <void method="add">
     <object idref="Cama0"/>
    </void>
+   <void method="add">
+    <object idref="Cama1"/>
+   </void>
   </void>
   <void property="listaUsuarios">
    <void method="add">
@@ -157,6 +196,9 @@
       <string>otro</string>
      </void>
     </object>
+   </void>
+   <void method="add">
+    <object idref="Usuario2"/>
    </void>
   </void>
  </object>

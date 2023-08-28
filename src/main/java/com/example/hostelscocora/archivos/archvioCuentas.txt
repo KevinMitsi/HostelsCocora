@@ -1,3 +1,4 @@
 kevin,123,EMPLEADO
 ana,123,EMPLEADO
 otro,otro,EMPLEADO
+otro,123,EMPLEADO
