@@ -8,8 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class HelloApplication extends Application {
     Hostal hostal = new Hostal("Hostels Cocora", "Enalgun lugar");
@@ -37,6 +35,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("panelEmpleadoView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         PanelEmpleadoController controller = fxmlLoader.getController();
+        controller.setEmpleado(empleadoLogeado);
         controller.setMain(this);
         scene.getStylesheets().clear();
         scene.setFill(Color.TRANSPARENT);
@@ -108,8 +107,23 @@ public class HelloApplication extends Application {
         stage.setResizable(false);
         stage.show();
     }
-
+    public void abrirAmpliarCama(Cama camaSeleccionada, Empleado empleadoLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ampliacionCamaView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        AmpliacionCamaViewController controller = fxmlLoader.getController();
+        controller.setMain(this);
+        controller.setCamaSeleccionada(camaSeleccionada);
+        controller.setEmpleadoLoggeado(empleadoLogeado);
+        scene.getStylesheets().clear();
+        scene.setFill(Color.TRANSPARENT);
+        stage.setScene(scene);
+        stage.setTitle("Ampliar cama");
+        stage.setResizable(false);
+        stage.show();
+    }
     public static void main(String[] args) {
         launch();
     }
+
+
 }

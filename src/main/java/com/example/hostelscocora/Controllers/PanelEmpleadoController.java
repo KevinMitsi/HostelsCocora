@@ -12,11 +12,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.io.IOException;
+
 public class PanelEmpleadoController {
+    public Button btnAmpliarCama;
+    public Button btnRegresar;
+    public Button btnAmpliarHabitacion;
     private ObservableList<Cama> listCamasData = FXCollections.observableArrayList();
     private ObservableList<Habitacion> listHabitacionesData = FXCollections.observableArrayList();
     private ObservableList<Cliente> listClientesData = FXCollections.observableArrayList();
-
+    Empleado empleadoLogeado;
     private Cama camaSeleccionada = null;
     private Habitacion habitacionSeleccionada = null;
     private Cliente clienteSeleccionado = null;
@@ -77,8 +82,8 @@ public class PanelEmpleadoController {
     }
 
     @FXML
-    void onIdCamaButtonClick(ActionEvent event) {
-
+    void onIdCamaButtonClick(ActionEvent event) throws IOException {
+        main.abrirAmpliarCama(camaSeleccionada, empleadoLogeado);
     }
 
     @FXML
@@ -110,6 +115,16 @@ public class PanelEmpleadoController {
         colEsatdoHabitaciones.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getEstado()));
         colTipoHabitaciones.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getTipo()));
         tableHbabitacion.refresh();
+
+        tableHbabitacion.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            habitacionSeleccionada = newSelection;
+        });
+        tableCliente.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            clienteSeleccionado = newSelection;
+        });
+        TableCamas.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            camaSeleccionada = newSelection;
+        });
     }
 
 
@@ -137,5 +152,19 @@ public class PanelEmpleadoController {
         TableCamas.setItems(obtenerListaCamas());
         tableCliente.getItems().clear();
         tableCliente.setItems(obtenerListaClientes());
+    }
+
+    public void setEmpleado(Empleado empleadoLogeado) {
+        this.empleadoLogeado=empleadoLogeado;
+    }
+
+    public void onAmpliarButtonClick(ActionEvent actionEvent) {
+    }
+
+    public void onActionButtonClick(ActionEvent actionEvent) throws IOException {
+        main.inicializarLogin();
+    }
+
+    public void onAmpliarHabitacionButtonClick(ActionEvent actionEvent) {
     }
 }
